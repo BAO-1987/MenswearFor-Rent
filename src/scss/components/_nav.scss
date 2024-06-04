@@ -1,0 +1,76 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.nav {
+  $root: &;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  &__item {
+    &:not(:last-of-type) {
+      margin-right: 15px;
+    }
+  }
+
+  &__link {
+    font-weight: var(--fw-400);
+    font-size: 18px;
+    line-height: 1.21;
+    background-color: transparent;
+    transition: color 0.3s linear;
+
+    &.true {
+      font-weight: var(--fw-700);
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  @include media(tablet) {
+    &--footer {
+      margin-bottom: 25px;
+      flex-direction: column;
+      justify-content: center;
+      gap: 25px;
+
+      #{$root}__inner {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      #{$root}__list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+      }
+
+      #{$root}__item {
+        margin: 0;
+      }
+
+      #{$root}__block {
+        margin: 0 auto;
+      }
+    }
+  }
+}

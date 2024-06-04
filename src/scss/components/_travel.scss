@@ -1,0 +1,22 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.travel {
+  li {
+    &:not(:last-child) {
+      margin-bottom: 48px;
+    }
+  }
+
+  .title {
+    margin-bottom: 16px;
+  }
+
+  @include media(tablet) {
+    li {
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}

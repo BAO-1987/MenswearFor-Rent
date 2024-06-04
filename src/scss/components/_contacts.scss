@@ -1,0 +1,122 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.contacts {
+  border-radius: 0;
+  min-height: 463px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &::before {
+    background: var(--gray);
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: var(--radius-big);
+    padding: 86px 112px;
+    background: rgba(238, 238, 238, 0.16);
+    backdrop-filter: blur(13px);
+    gap: 24px;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 643px;
+    gap: 8;
+
+    label {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    input {
+      overflow: hidden;
+      border-radius: 8px;
+      padding: 28px 36px;
+      width: 100%;
+      max-width: 100%;
+      box-shadow: 0 13px 19px 0 rgba(0, 0, 0, 0.07);
+      color: var(--color-gray-300);
+      background-color: var(--color-gray-50);
+
+      &::placeholder {
+        font-style: italic;
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__desc {
+    width: 100%;
+    max-width: 421px;
+  }
+
+  h2 {
+    margin-bottom: 4px;
+    font-family: var(--font-family-primary);
+    font-weight: var(--fw-700);
+    font-size: clamp(1.25rem, 1rem + 1.1111vi, 2rem);
+    line-height: 1.25;
+    color: var(--color-white);
+  }
+
+  p {
+    font-weight: var(--fw-500);
+    color: var(--color-white);
+  }
+
+  .btn {
+    padding: 26px 20px;
+    font-weight: var(--fw-700);
+  }
+
+  @include media(tablet-wide) {
+    &__inner {
+      padding: 40px;
+    }
+  }
+
+  @include media(tablet) {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__desc {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+
+  @include media(mobile-m) {
+    min-height: 350px;
+
+    &__inner {
+      padding: 20px;
+    }
+
+    &__form {
+      flex-direction: column;
+
+      input {
+        padding: 17px;
+      }
+    }
+
+    .btn {
+      padding: 15px;
+      max-width: 100%;
+    }
+  }
+}

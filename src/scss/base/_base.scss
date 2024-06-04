@@ -1,0 +1,170 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins" as *;
+
+html,
+body {
+  scroll-behavior: smooth;
+  overscroll-behavior-y: none;
+}
+
+.page {
+  height: var(--vh);
+  font-family: var(--font-family-primary);
+  font-weight: var(--fw-400);
+  font-style: normal;
+  font-size: clamp(16px, 1vw, 20px);
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: var(--color-brown-400);
+  background-color: var(--color-pink-50);
+  font-optical-sizing: auto;
+  scroll-padding: var(--header-height);
+
+  &__body {
+    position: relative;
+    min-width: 320px;
+    min-height: var(--vh);
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      background-color: rgba(39, 40, 43, 0.75);
+      opacity: 0;
+      transition: opacity 0.3s;
+      inset: 0;
+    }
+  }
+
+  &.open {
+    overflow: hidden;
+
+    > .page__body::before {
+      z-index: 5;
+      opacity: 1;
+    }
+  }
+}
+
+.section {
+  padding: rem(86) 0;
+
+  @include media(tablet) {
+    padding: 30px 0;
+  }
+}
+
+.container,
+.wrapper {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  width: 100%;
+  max-width: var(--container-width);
+}
+
+.wrapper {
+  max-width: 1122px;
+}
+
+.site-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr auto;
+  min-height: var(--vh);
+}
+
+.main {
+  &--top {
+    padding-top: var(--header-height);
+  }
+}
+
+.content {
+  margin-bottom: 16px;
+
+  h2 {
+    margin-bottom: 5px;
+  }
+
+  h3 {
+    margin-bottom: 0;
+  }
+
+  @include media(tablet) {
+    text-align: center;
+  }
+}
+
+.overlay {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: var(--radius-big);
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: var(--gradient);
+    inset: 0;
+  }
+
+  &--gray {
+    &::before {
+      background: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  margin-right: 87px;
+  width: 100%;
+  max-width: 274px;
+
+  img {
+    width: 100%;
+    height: 43px;
+  }
+}
+
+.list {
+  padding-left: 25px;
+
+  li {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -15px;
+      top: 7px;
+      border-radius: 50%;
+      width: 5px;
+      height: 5px;
+      background-color: currentColor;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+  }
+
+  @include media(mobile-l) {
+    padding-left: 15px;
+  }
+}
+
+.images {
+  img {
+    width: 100%;
+  }
+
+  @include media(tablet) {
+    img {
+      aspect-ratio: 2/1;
+    }
+  }
+}
