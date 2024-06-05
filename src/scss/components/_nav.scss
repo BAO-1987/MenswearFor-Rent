@@ -24,7 +24,7 @@
 
   &__item {
     &:not(:last-of-type) {
-      margin-right: 15px;
+      margin-right: 33px;
     }
   }
 
@@ -32,6 +32,7 @@
     font-weight: var(--fw-400);
     font-size: 18px;
     line-height: 1.21;
+    color: var(--color-brown-300);
     background-color: transparent;
     transition: color 0.3s linear;
 
@@ -43,7 +44,7 @@
   &__btns {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 24px;
   }
 
   @include media(tablet) {

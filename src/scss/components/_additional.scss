@@ -4,57 +4,34 @@
 .additional {
   $root: &;
 
-  padding-bottom: 55px;
-
-  &__list {
-    display: flex;
-    flex-direction: column;
-    gap: 64;
+  &__inner {
+    position: relative;
   }
 
-  &__item {
-    display: flex;
+  &__images {
+    img {
+      overflow: hidden;
+      border-radius: var(--radius-big);
+    }
+  }
+
+  &__content {
+    position: absolute;
+    overflow: hidden;
+    padding: 48px;
+    top: 50%;
+    border-radius: var(--radius-big);
     width: 100%;
-    max-width: 978px;
-    gap: 24px;
+    max-width: 484px;
+    background-color: var(--color-brown-10);
+    translate: 150% -50%;
 
-    &--reverse {
-      align-items: center;
-      margin-left: auto;
+    p {
+      margin-bottom: 32px;
     }
   }
 
-  &__desc {
-    width: 100%;
-    max-width: 422px;
-  }
-
-  .content {
-    margin-bottom: 29px;
-
-    h2 {
-      margin-bottom: 8px;
-    }
-  }
-
-  @include media(tablet) {
-    padding-bottom: 30px;
-
-    &__list {
-      gap: 24px;
-    }
-
-    &__item {
-      flex-direction: column;
-      max-width: 100%;
-
-      &--reverse {
-        align-items: normal;
-      }
-    }
-
-    &__desc {
-      max-width: 100%;
-    }
+  h2 {
+    margin-bottom: 32px;
   }
 }

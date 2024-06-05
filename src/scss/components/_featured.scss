@@ -1,0 +1,10 @@
+@use "../utils/functions/" as *;
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.featured {
+  p {
+    margin-bottom: 32px;
+    font-size: 18px;
+  }
+}

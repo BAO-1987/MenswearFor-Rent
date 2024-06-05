@@ -24,7 +24,8 @@
   --color-white: #fff;
   --color-black: #000;
   --color-dark-900: #252b42;
-  --color-pink-50: #f3e3d4;
+  --color-brown-10: #FFF5EC;
+  --color-brown-50: #f3e3d4;
   --color-brown-300: #9B6B43;
   --color-brown-400: #734c23;
   //  radius
@@ -32,7 +33,7 @@
   --radius-big: 24px;
 
   // gradients
-  --gradient: linear-gradient(90deg, rgba(243, 227, 212, 0.9) 0%, rgba(243, 227, 212, 0.9) 57.29%);
+  --gradient: linear-gradient(-90deg, rgba(243, 227, 212, 0) 1.319%,rgba(243, 227, 212, 0.9) 54.071%);
   --gradient-second: linear-gradient(180deg, rgba(68, 44, 19, 0) 0%, #442c13 100%);
 
 }

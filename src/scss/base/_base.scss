@@ -16,7 +16,7 @@ body {
   line-height: 1.4;
   letter-spacing: 0;
   color: var(--color-brown-400);
-  background-color: var(--color-pink-50);
+  background-color: var(--color-brown-50);
   font-optical-sizing: auto;
   scroll-padding: var(--header-height);
 
@@ -63,7 +63,7 @@ body {
 }
 
 .wrapper {
-  max-width: 1122px;
+  max-width: 1340px;
 }
 
 .site-container {
@@ -74,9 +74,7 @@ body {
 }
 
 .main {
-  &--top {
-    padding-top: var(--header-height);
-  }
+  padding-top: var(--header-height);
 }
 
 .content {
@@ -99,13 +97,13 @@ body {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  border-radius: var(--radius-big);
 
   &::before {
     content: "";
     position: absolute;
     background: var(--gradient);
     inset: 0;
+    z-index: -1;
   }
 
   &--gray {
@@ -120,13 +118,23 @@ body {
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  margin-right: 87px;
+  margin-right: 100px;
   width: 100%;
-  max-width: 274px;
+  max-width: 290px;
 
   img {
     width: 100%;
-    height: 43px;
+  }
+}
+
+.is-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+
+  img {
+    overflow: hidden;
+    border-radius: var(--radius-main);
   }
 }
 
