@@ -4,6 +4,8 @@
 .additional {
   $root: &;
 
+  padding-bottom: 120px;
+
   &__inner {
     position: relative;
   }
@@ -19,19 +21,31 @@
     position: absolute;
     overflow: hidden;
     padding: 48px;
-    top: 50%;
+    top: 59%;
     border-radius: var(--radius-big);
     width: 100%;
     max-width: 484px;
     background-color: var(--color-brown-10);
-    translate: 150% -50%;
+    translate: 151% -50%;
 
     p {
-      margin-bottom: 32px;
+      margin-bottom: 31px;
+    }
+  }
+
+  &--suits {
+    #{$root}__content {
+      p {
+        margin-bottom: 0;
+      }
     }
   }
 
   h2 {
-    margin-bottom: 32px;
+    margin-bottom: 28px;
+  }
+
+  .btn {
+    padding: 16px 20px;
   }
 }

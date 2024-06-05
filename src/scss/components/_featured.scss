@@ -3,6 +3,10 @@
 @use "../utils/mixins/" as *;
 
 .featured {
+  h3 {
+    margin-bottom: 12px;
+  }
+
   p {
     margin-bottom: 32px;
     font-size: 18px;

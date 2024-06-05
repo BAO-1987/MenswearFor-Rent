@@ -2,60 +2,52 @@
 @use "../utils/mixins/" as *;
 
 .reviews {
+  padding: 113px 0;
+  width: 100%;
+  max-width: 1128px;
+  margin-inline: auto;
+
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
   }
 
   li {
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
-    border: 1px solid rgba(38, 160, 116, 0.24);
-    border-radius: 16px;
-    padding: 24px;
+    border-radius: var(--radius-big);
+    padding: 40px;
+    height: 100%;
+    background-color: var(--color-brown-10);
   }
 
   img {
-    overflow: hidden;
-    margin-bottom: 24px;
-    border-radius: 50%;
+    &:first-of-type {
+      overflow: hidden;
+      margin-bottom: 40px;
+      border-radius: 50%;
+    }
+
+    &:last-of-type {
+      margin-bottom: 32px;
+    }
+  }
+
+  p {
+    margin-bottom: 50px;
+    line-height: 1.21;
+    letter-spacing: 0.01em;
+  }
+
+  h2 {
+    margin-bottom: 62px;
+    text-align: center;
   }
 
   h3 {
-    margin-bottom: 24px;
-  }
-
-  @include media(tablet-wide) {
-    li {
-      padding: 16px;
-    }
-
-    h3 {
-      margin-bottom: 16px;
-    }
-  }
-
-  @include media(mobile-l) {
-    &__list {
-      grid-template-columns: repeat(2, 1fr);
-
-      li {
-        &:last-child {
-          grid-column: 2 span;
-        }
-      }
-    }
-  }
-
-  @include media(mobile-m) {
-    &__list {
-      grid-template-columns: 1fr;
-
-      li {
-        &:last-child {
-          grid-column: auto;
-        }
-      }
-    }
+    margin: auto 0 0;
+    font-size: clamp(18px, 0.875rem + 1.1111vi, 30px);
   }
 }
