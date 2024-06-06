@@ -5,6 +5,8 @@
 @use "../utils/mixins/" as *;
 
 .slider {
+  $root: &;
+
   padding: rem(80) 0 rem(126);
 
   h2 {
@@ -106,6 +108,14 @@
 
     .swiper-pagination-bullets .swiper-pagination-bullet {
       margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 8px);
+    }
+  }
+
+  &--events {
+    padding: 112px 0 97px;
+
+    #{$root}__list {
+      margin-bottom: 64px;
     }
   }
 

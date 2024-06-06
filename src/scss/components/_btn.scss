@@ -48,13 +48,14 @@
     border-radius: 16px;
     min-height: 64px;
     max-width: 64px;
+    padding: 15px;
 
     &::before {
       @include mask;
 
       mask-image: url("../images/icons/arrow.svg");
-      width: 27px;
-      height: 18px;
+      width: 26px;
+      height: 17px;
     }
 
     &:hover {

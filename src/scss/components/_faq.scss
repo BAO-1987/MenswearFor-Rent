@@ -6,9 +6,10 @@
     overflow: hidden;
     border: 2px solid var(--color-brown-400);
     border-radius: var(--radius-main);
+    letter-spacing: 0.02em;
 
     &:not(:last-child) {
-      margin-bottom: 32px;
+      margin-bottom: 29px;
     }
   }
 
@@ -31,18 +32,18 @@
     padding: 24px 32px;
     font-weight: var(--fw-600);
     font-size: clamp(1.125rem, 1.0833rem + 0.1852vi, 1.25rem);
-    line-height: 1.5;
-    color: var(--color-green-300);
+    line-height: 1.2;
+    color: var(--color-brown-400);
     cursor: pointer;
 
     &::after {
       content: "";
       position: absolute;
-      right: 0;
+      right: 24px;
       top: 24px;
       width: 32px;
       height: 32px;
-      // background-image: url("../images/icons/chevron.svg");
+      background-image: url("../images/icons/chevron.svg");
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -51,13 +52,18 @@
     }
 
     + div {
-      padding: 8px 0 0 0;
+      padding: 16px 24px 24px 32px;
+
+      p {
+        font-size: 18px;
+        line-height: 1.2;
+      }
     }
   }
 
-  .title {
-    margin-bottom: 48px;
-    font-weight: var(--fw-700);
+  h2 {
+    margin: 0 auto 45px;
+    text-align: center;
   }
 
   @include media(tablet) {

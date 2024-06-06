@@ -77,22 +77,6 @@ body {
   padding-top: var(--header-height);
 }
 
-.content {
-  margin-bottom: 16px;
-
-  h2 {
-    margin-bottom: 5px;
-  }
-
-  h3 {
-    margin-bottom: 0;
-  }
-
-  @include media(tablet) {
-    text-align: center;
-  }
-}
-
 .overlay {
   position: relative;
   z-index: 1;
@@ -164,14 +148,10 @@ body {
   }
 }
 
-.images {
+.gallery {
+  padding: 140px 0;
+
   img {
     width: 100%;
-  }
-
-  @include media(tablet) {
-    img {
-      aspect-ratio: 2/1;
-    }
   }
 }
