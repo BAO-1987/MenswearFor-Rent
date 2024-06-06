@@ -1,0 +1,24 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins" as *;
+
+.choose {
+  letter-spacing: 0.01em;
+  color: var(--color-brown-400);
+
+  &__list {
+    li {
+      &:not(:last-child) {
+        margin-bottom: 48px;
+      }
+    }
+  }
+
+  img {
+    overflow: hidden;
+    border-radius: var(--radius-big);
+  }
+
+  .title {
+    margin-bottom: 24px;
+  }
+}

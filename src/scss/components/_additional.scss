@@ -34,10 +34,22 @@
   }
 
   &--suits {
+    padding-bottom: 190px;
+
     #{$root}__content {
+      top: 64%;
+
       p {
         margin-bottom: 0;
       }
+    }
+  }
+
+  &--guide {
+    padding-bottom: 146px;
+
+    #{$root}__content {
+      top: 61%;
     }
   }
 

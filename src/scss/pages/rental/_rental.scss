@@ -1,0 +1,17 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins" as *;
+
+.rental {
+  padding: 139px 0 140px;
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-columns: repeat(2, auto);
+  gap: 24px;
+
+
+  &__content {
+    width: 100%;
+    max-width: 379px;
+  }
+}

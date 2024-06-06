@@ -42,4 +42,23 @@
       background-color: var(--color-brown-300);
     }
   }
+
+  &--slider {
+    z-index: 2;
+    border-radius: 16px;
+    min-height: 64px;
+    max-width: 64px;
+
+    &::before {
+      @include mask;
+
+      mask-image: url("../images/icons/arrow.svg");
+      width: 27px;
+      height: 18px;
+    }
+
+    &:hover {
+      color: var(--color-brown-400);
+    }
+  }
 }
