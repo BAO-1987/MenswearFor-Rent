@@ -46,9 +46,9 @@
   &--slider {
     z-index: 2;
     border-radius: 16px;
+    padding: 15px;
     min-height: 64px;
     max-width: 64px;
-    padding: 15px;
 
     &::before {
       @include mask;
@@ -60,6 +60,24 @@
 
     &:hover {
       color: var(--color-brown-400);
+    }
+  }
+
+  &--arrow {
+    margin-bottom: 16px;
+    padding: 7px 20px;
+    font-weight: var(--fw-400);
+    color: var(--color-brown-400);
+    background-color: transparent;
+    gap: 10px;
+
+    &::before {
+      @include mask;
+
+      mask-image: url("../images/icons/arrow.svg");
+      width: 26px;
+      height: 17px;
+      scale: -1 1;
     }
   }
 }

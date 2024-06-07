@@ -28,7 +28,6 @@
     margin-bottom: 24px;
   }
 
-
   p {
     margin-bottom: 48px;
   }
@@ -37,6 +36,19 @@
     padding: 15px 18px;
   }
 
+  &--post {
+    #{$root}__content {
+      max-width: 471px;
+    }
+
+    h2 {
+      margin-bottom: 0;
+    }
+
+    .btn {
+      padding: 9px 20px;
+    }
+  }
 
   @include media(tablet) {
     &__inner {
@@ -49,14 +61,16 @@
   }
 
   @include media(mobile-m) {
-   #{$root}__inner {
-      min-height: 400px;
+    #{$root}__inner {
+      min-height: 375px;
 
       p {
         font-size: 18px;
       }
+    }
 
-      .btn {
+    .btn {
+      &:not(.btn--arrow) {
         max-width: 100%;
       }
     }

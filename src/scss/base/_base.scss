@@ -88,12 +88,6 @@ body {
     background: var(--gradient);
     inset: 0;
   }
-
-  &--gray {
-    &::before {
-      background: rgba(0, 0, 0, 0.5);
-    }
-  }
 }
 
 .logo {
@@ -117,8 +111,8 @@ body {
 
   img {
     overflow: hidden;
-    width: 100%;
     border-radius: var(--radius-main);
+    width: 100%;
   }
 
   @include media(tablet) {
@@ -140,8 +134,8 @@ body {
 
     li {
       img {
-        aspect-ratio: 2/1;
         width: 100%;
+        aspect-ratio: 2/1;
       }
 
       &:last-child {
@@ -151,37 +145,45 @@ body {
   }
 }
 
-.list {
-  padding-left: 25px;
+// .list {
+//   padding-left: 25px;
 
-  li {
-    position: relative;
+//   li {
+//     position: relative;
 
-    &::before {
-      content: "";
-      position: absolute;
-      left: -15px;
-      top: 7px;
-      border-radius: 50%;
-      width: 5px;
-      height: 5px;
-      background-color: currentColor;
-    }
+//     &::before {
+//       content: "";
+//       position: absolute;
+//       left: -15px;
+//       top: 7px;
+//       border-radius: 50%;
+//       width: 5px;
+//       height: 5px;
+//       background-color: currentColor;
+//     }
 
-    &:not(:last-child) {
-      margin-bottom: 6px;
-    }
-  }
+//     &:not(:last-child) {
+//       margin-bottom: 6px;
+//     }
+//   }
 
-  @include media(mobile-l) {
-    padding-left: 15px;
-  }
-}
+//   @include media(mobile-l) {
+//     padding-left: 15px;
+//   }
+// }
 
 .gallery {
-  padding: 140px 0;
+  padding: rem(140) 0;
 
   img {
     width: 100%;
+  }
+
+  @include media(tablet-wide) {
+    padding: 80px 0;
+  }
+
+  @include media(tablet) {
+    padding: 30px 0;
   }
 }
