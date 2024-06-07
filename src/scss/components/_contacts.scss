@@ -2,11 +2,23 @@
 @use "../utils/mixins/" as *;
 
 .contacts {
-  padding: 112px 0;
+  padding: rem(112) 0;
 
   h2 {
-    margin-bottom: 62px;
+    margin-bottom: rem(62);
     text-align: center;
+  }
+
+  @include media(tablet-wide) {
+    padding: 80px 0;
+  }
+
+  @include media(tablet) {
+    padding: 30px 0;
+
+    h2 {
+      margin-bottom: 30px;
+    }
   }
 }
 
@@ -45,35 +57,35 @@
     &:last-of-type {
       grid-column: 2 span;
     }
+  }
 
-    input,
-    textarea {
-      overflow: hidden;
-      border-radius: var(--radius-main);
-      padding: 20px 16px;
-      width: 100%;
-      max-width: 100%;
-      color: var(--color-gray-300);
-      background-color: var(--color-white);
+  input,
+  textarea {
+    overflow: hidden;
+    border-radius: var(--radius-main);
+    padding: 20px 16px;
+    width: 100%;
+    max-width: 100%;
+    color: var(--color-gray-300);
+    background-color: var(--color-white);
 
-      &::placeholder {
-        font-size: 18px;
-        letter-spacing: 0.01em;
-        line-height: 1.21;
-      }
-    }
-
-    textarea {
-      border: none;
-      padding: 10px 16px;
-      min-height: 162px;
-      resize: none;
+    &::placeholder {
+      font-size: 18px;
+      line-height: 1.21;
+      letter-spacing: 0.01em;
     }
   }
 
+  textarea {
+    border: none;
+    padding: 10px 16px;
+    min-height: 162px;
+    resize: none;
+  }
+
   .btn {
-    max-width: 100%;
     padding: 20px;
+    max-width: 100%;
     background-color: var(--color-brown-400);
   }
 
@@ -104,6 +116,44 @@
       input {
         border: 1px solid var(--color-gray-300);
         padding: 9px 8px;
+      }
+    }
+  }
+
+  @include media(tablet) {
+    &__inner {
+      gap: 24px;
+    }
+  }
+
+  @include media(mobile-l) {
+    input {
+      padding: 16px;
+    }
+
+    textarea {
+      min-height: 100px;
+    }
+  }
+
+  @include media(mobile-m) {
+    &__inner {
+      grid-template-columns: 1fr;
+    }
+
+    label {
+      &:last-of-type {
+        grid-column: auto;
+      }
+    }
+  }
+
+  @include media(mobile-sm) {
+    &--footer {
+      flex-direction: column;
+
+      .btn {
+        max-width: 100%;
       }
     }
   }

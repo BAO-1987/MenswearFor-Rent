@@ -117,7 +117,37 @@ body {
 
   img {
     overflow: hidden;
+    width: 100%;
     border-radius: var(--radius-main);
+  }
+
+  @include media(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+
+    li {
+      &:last-child {
+        grid-column: 2 span;
+
+        img {
+          aspect-ratio: 2/1;
+        }
+      }
+    }
+  }
+
+  @include media(mobile-l) {
+    grid-template-columns: 1fr;
+
+    li {
+      img {
+        aspect-ratio: 2/1;
+        width: 100%;
+      }
+
+      &:last-child {
+        grid-column: auto;
+      }
+    }
   }
 }
 

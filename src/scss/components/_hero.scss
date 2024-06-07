@@ -38,27 +38,13 @@
   }
 
 
-
-  // &--about {
-  //   p {
-  //     display: none;
-  //   }
-
-  //   #{$root}__content {
-  //     translate: 0 10px;
-  //   }
-  // }
-
-  // &--travel {
-  //   #{$root}__inner {
-  //     min-height: 534px;
-  //   }
-  // }
-
-
   @include media(tablet) {
     &__inner {
       min-height: 500px;
+    }
+
+    p {
+      margin-bottom: 24px;
     }
   }
 
@@ -68,6 +54,10 @@
 
       p {
         font-size: 18px;
+      }
+
+      .btn {
+        max-width: 100%;
       }
     }
   }

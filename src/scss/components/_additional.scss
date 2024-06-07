@@ -37,7 +37,6 @@
     padding-bottom: 190px;
 
     #{$root}__content {
-      top: 64%;
 
       p {
         margin-bottom: 0;
@@ -47,17 +46,39 @@
 
   &--guide {
     padding-bottom: 146px;
-
-    #{$root}__content {
-      top: 61%;
-    }
   }
 
   h2 {
-    margin-bottom: 28px;
+    margin-bottom: 32px;
   }
 
   .btn {
     padding: 16px 20px;
+  }
+
+  @include media(tablet-wide) {
+    padding-bottom: 80px;
+  }
+
+  @include media(tablet) {
+    padding-bottom: 30px;
+
+    &__content {
+      padding: 16px;
+    }
+  }
+
+  @include media(mobile-l) {
+
+    &__inner {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 30px;
+    }
+    &__content {
+      position: relative;
+      max-width: 100%;
+      inset: 0;
+    }
   }
 }

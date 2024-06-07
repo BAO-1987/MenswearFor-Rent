@@ -4,16 +4,17 @@
 .footer {
   &__top {
     display: flex;
-    justify-content: space-between;
     align-items: flex-start;
-    padding: 86px 0;
+    justify-content: space-between;
+    padding: rem(86) 0;
     gap: 24px;
   }
 
   &__mail {
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 19px;
-    font-size: 20px;
+    font-size: clamp(16px, 0.9167rem + 0.3704vi, 20px);
     color: var(--color-black);
     gap: 41px;
 
@@ -59,18 +60,28 @@
   }
 
   .logo {
+    margin: 0;
     max-width: 347px;
   }
 
   @include media(tablet-wide) {
-    padding: 20px 0;
+    &__top {
+      padding: 40px 0;
+    }
 
-    &__policy {
+    &__mail {
       gap: 16px;
     }
   }
 
-  @include media(tablet) {
+  @include media(mobile-l) {
+    &__top {
+      flex-direction: column;
+      place-items: center;
+    }
+  }
+
+  @include media(mobile-m) {
     &__copy {
       flex-direction: column;
       justify-content: center;
@@ -80,10 +91,7 @@
 
     &__policy {
       justify-content: center;
-    }
-
-    .logo {
-      margin: 0 auto;
+      gap: 16px;
     }
   }
 }

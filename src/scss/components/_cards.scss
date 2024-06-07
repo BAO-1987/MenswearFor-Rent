@@ -2,14 +2,19 @@
 @use "../utils/mixins/" as *;
 
 .cards {
-
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
   &__content {
+    display: flex;
+    flex-direction: column;
     padding: 16px;
+    height: 100%;
   }
 
-  p {
-    margin-bottom: 16px;
+  &__images {
+    border-radius: var(--radius-main);
   }
 
   span {
@@ -21,5 +26,11 @@
 
   .btn {
     margin-top: auto;
+  }
+
+  @include media(mobile-m) {
+    .btn {
+      max-width: 100%;
+    }
   }
 }

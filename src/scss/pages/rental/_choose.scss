@@ -16,6 +16,10 @@
     p {
       line-height: 1.2;
     }
+
+    img {
+      min-height: 150px;
+    }
   }
 
   img {
@@ -25,5 +29,13 @@
 
   .title {
     margin-bottom: 24px;
+  }
+
+  @include media(tablet) {
+    li {
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
   }
 }
