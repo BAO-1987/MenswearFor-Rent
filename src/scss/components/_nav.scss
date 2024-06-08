@@ -34,8 +34,13 @@
     background-color: transparent;
     transition: color 0.3s linear;
 
+    &:hover {
+      color: var(--color-brown-500);
+    }
+
     &.true {
       font-weight: var(--fw-700);
+      color: var(--color-brown-500);
     }
   }
 

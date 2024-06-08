@@ -18,6 +18,12 @@ h3 {
   font-size: clamp(25px, 1.3333rem + 1.0185vi, 36px);
 }
 
+h2 {
+  @include media(tablet) {
+    margin-bottom: 24px;
+  }
+}
+
 h3 {
   margin-bottom: 16px;
   font-size: clamp(16px, 0.9167rem + 0.3704vi, 20px);

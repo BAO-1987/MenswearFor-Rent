@@ -131,7 +131,7 @@
   }
 
   @include media(tablet-wide) {
-    padding: 40px 0;
+    padding: 60px 0;
 
     img {
       margin-bottom: 30px;
@@ -142,11 +142,15 @@
     }
 
     &--events {
-      padding: 40px 0;
+      padding: 60px 0;
 
       #{$root}__list {
         margin-bottom: 30px;
       }
     }
+  }
+
+  @include media(tablet) {
+    padding: 30px 0;
   }
 }
