@@ -17,4 +17,10 @@
       margin-bottom: 0;
     }
   }
+
+  @include media(tablet) {
+    p {
+      margin-bottom: 16px;
+    }
+  }
 }

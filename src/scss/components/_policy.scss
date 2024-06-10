@@ -46,7 +46,12 @@
 
   a {
     text-decoration: underline;
-    color: var(--color-brown-400);
+    color: var(--color-brown-300);
+    transition: 0.3s linear color;
+
+    &:hover {
+      color: var(--color-brown-400);
+    }
   }
 
   @include media(tablet) {
