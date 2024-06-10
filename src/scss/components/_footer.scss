@@ -15,11 +15,18 @@
     flex-wrap: wrap;
     margin-bottom: 19px;
     font-size: clamp(16px, 0.9167rem + 0.3704vi, 20px);
+    text-decoration: underline;
+    text-decoration-color: transparent;
     color: var(--color-black);
+    transition: text-decoration-color 0.3s linear;
     gap: 41px;
 
     span {
       color: var(--color-brown-400);
+    }
+
+    &:hover {
+      text-decoration-color: currentcolor;
     }
   }
 
